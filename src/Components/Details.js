@@ -1,5 +1,4 @@
 import React from 'react'
-import { useState } from 'react'
 
 
 function Details(props) {
@@ -48,8 +47,8 @@ function Details(props) {
     <span className='er-msg'>Error: {props.error}</span></div>}
     {!props.loading && !props.error && props.data && <div>
       <div className="details">
-        {props.data.places.length == 1 && <h2>Hurray! We found the place</h2>}
-        {props.data.places.length != 1 && <h2>Hurray! We found some places</h2>}
+        {props.data.places.length === 1 && <h2>Hurray! We found the place</h2>}
+        {props.data.places.length !== 1 && <h2>Hurray! We found some places</h2>}
         {props.data.places.map( (item, index) => (
         <div className="card">
           <h4 style={{textAlign: 'center'}}> {item['place name']}</h4>
