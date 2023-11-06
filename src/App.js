@@ -15,7 +15,7 @@ function App() {
 
   function fetchDetails() {
     setLoading(true);
-    axios.get(`http://api.zippopotam.us/${country}/${zip}`)
+    axios.get(`https://api.zippopotam.us/${country}/${zip}`)
     .then(res => {
       console.log(res.data);
       setData(res.data);
